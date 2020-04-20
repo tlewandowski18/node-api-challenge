@@ -40,13 +40,24 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Mention two parts of Express that you learned about this week.
 
+Express servers and express routers
+
 - [ ] Describe Middleware?
+
+Anything that happens between the time when a request is made and a response is delivered
 
 - [ ] Describe a Resource?
 
+A resource is the fundamental building block of a RESTful API.  Resources are objects that have types, data, relationships to other resources, and methods that operate it.
+
 - [ ] What can the API return to help clients know if a request was successful?
 
+A status code
+
 - [ ] How can we partition our application into sub-applications?
+
+We use express routers to compartmentalize our routes, and use middleware functions saved in separate files
+
 
 ## Minimum Viable Product
 
