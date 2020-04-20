@@ -12,3 +12,30 @@ I need this code, but don't know where, perhaps should make some middleware, don
 
 Go code!
 */
+
+const express = require("express")
+const projectsRouter = require("./projects/projectRouter")
+
+const server = express()
+
+server.use(express.json())
+server.use("/projects", projectsRouter)
+
+server.get("/", (req, res) => {
+    res.json({
+        message: "Welcome"
+    })
+})
+
+server.use((err, req, res, next) => {
+	console.log(err)
+	res.status(500).json({
+		message: "Something went wrong"
+	})
+})
+
+
+server.listen(4040, () => {
+    console.log('Server is running on port 4040')
+})
+
